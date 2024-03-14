@@ -1,3 +1,4 @@
+// Oeuvre.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -24,12 +25,15 @@ const Oeuvre = () => {
           <div key={index}>
             <p>Titre: {print.title}</p>
             <p>Description: {print.description}</p>
-            <a target="_blank">
-                <img src={print.image}  alt="React logo" />
-          </a>
+            <a href={`detail/${print.id}`} target="_blank">
+              <img src={print.image} alt="React logo" />
+            </a>
             <p>Prix: {print.price} €</p>
             <p>Taille: {print.size}</p>
             <p>Collection: {print.collection}</p>
+            <a href={`detail/${print.id}`} target="_blank">
+              <button>Voir détail</button>
+            </a>
           </div>
         ))
       ) : (

@@ -12,9 +12,6 @@ function App() {
       <div>
           <Oeuvre></Oeuvre>
       </div>
-      
-    
-
     </>
   )
 }
