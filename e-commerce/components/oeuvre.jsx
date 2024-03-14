@@ -19,6 +19,7 @@ const Oeuvre = () => {
 
   return (
     <div className="centered-container">
+      <h1>Oeuvres</h1>
       {printsData ? (
         <div className="centered-content">
           {printsData.map((print, index) => (
