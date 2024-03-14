@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useCart } from 'react-use-cart';
 
 const Oeuvre = () => {
   const [printsData, setPrintsData] = useState(null);
+  const { addItem } = useCart();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,9 +19,12 @@ const Oeuvre = () => {
     fetchData();
   }, []);
 
+  const handleAddToCart = (print) => {
+    addItem(print);
+  };
+
   return (
     <div className="centered-container">
-      <h1>Oeuvres</h1>
       {printsData ? (
         <div className="centered-content">
           {printsData.map((print, index) => (
@@ -32,6 +37,7 @@ const Oeuvre = () => {
               <p>Prix: {print.price} €</p>
               <p>Taille: {print.size}</p>
               <p>Collection: {print.collection}</p>
+              <button onClick={() => handleAddToCart(print)}>Ajouter au panier</button>
               <a href={`detail/${print.id}`} target="_blank">
                 <button>Voir détail</button>
               </a>
