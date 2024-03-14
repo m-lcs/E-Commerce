@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
-
 const Oeuvre = () => {
   const [printsData, setPrintsData] = useState(null);
 
@@ -20,23 +18,25 @@ const Oeuvre = () => {
   }, []);
 
   return (
-    <div>
+    <div className="centered-container">
       {printsData ? (
-        printsData.map((print, index) => (
-          <div key={index}>
-            <p>Titre: {print.title}</p>
-            <p>Description: {print.description}</p>
-            <a href={`detail/${print.id}`} target="_blank">
-              <img src={print.image} alt="React logo" />
-            </a>
-            <p>Prix: {print.price} €</p>
-            <p>Taille: {print.size}</p>
-            <p>Collection: {print.collection}</p>
-            <a href={`detail/${print.id}`} target="_blank">
-              <button>Voir détail</button>
-            </a>
-          </div>
-        ))
+        <div className="centered-content">
+          {printsData.map((print, index) => (
+            <div key={index}>
+              <p>Titre: {print.title}</p>
+              <p>Description: {print.description}</p>
+              <a href={`detail/${print.id}`} target="_blank">
+                <img src={print.image} alt="React logo" />
+              </a>
+              <p>Prix: {print.price} €</p>
+              <p>Taille: {print.size}</p>
+              <p>Collection: {print.collection}</p>
+              <a href={`detail/${print.id}`} target="_blank">
+                <button>Voir détail</button>
+              </a>
+            </div>
+          ))}
+        </div>
       ) : (
         <p>Chargement des données...</p>
       )}
