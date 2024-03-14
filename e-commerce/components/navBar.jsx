@@ -1,24 +1,18 @@
-// App.js
+// Navbar.js
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from "./home";
-//import Cart from "./components/Cart";
-//import "./App.css";
+import "../public/app.css"; // Importation du fichier CSS pour les styles de la barre de navigation
 
-function App() {
+const Navbar = () => {
   return (
-    <Router>
+    <nav className="navbar">
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-          </ul>
-        </nav>
+        <ul>
+          <li>Home</li>
+          <li>Panier</li>
+        </ul>
       </div>
-    </Router>
+    </nav>
   );
-}
+};
 
-export default App;
+export default Navbar;
