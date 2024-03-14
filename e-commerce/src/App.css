@@ -1,0 +1,58 @@
+.navbar {
+    background-color: #D4AF37;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    /* Modification pour occuper toute la largeur */
+    position: absolute;
+    /* Modification pour maintenir la barre de navigation en place */
+    top: 0;
+    z-index: 1000;
+    font-size: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* Modification pour centrer les éléments de la barre de navigation */
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Modification pour ajouter de l'espace autour des liens */
+}
+
+.navbar ul li a:hover {
+    color: black;
+}
+
+
+
+.centered-container {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Modification pour occuper toute la largeur */
+    /* Modification pour maintenir la barre de navigation en place */
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+}
+
+.centered-content {
+    text-align: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
